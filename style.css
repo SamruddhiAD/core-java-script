@@ -1,0 +1,301 @@
+/**
+  * StyleSheet for index.html and select.html
+  * @author Samruddhi Deshpande sd9335@rit.edu
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,700;0,800;1,600&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding:0;
+    font-family: 'Poppins',sans-serif;
+}
+
+.showcase {
+    position: absolute;
+    right: 0;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #111111;
+    color: #ffffff;
+    z-index: 2;
+}
+
+.showcase header{
+    position:absolute;
+    top:0;
+    left: 0;
+    width:100%;
+    padding: 40px 100px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    text-transform: uppercase;
+    cursor: pointer;
+
+}
+
+.showcase video{
+    position:absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    opacity: 0.5;
+}
+
+.overlay{
+    position:absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #e1ad01bb;
+    mix-blend-mode: overlay;
+}
+.container{
+    width:100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-flow: wrap;
+}
+.box{
+   
+    height: auto;
+
+}
+
+.text{
+    position: relative;
+    padding-top: 20px;
+    z-index: 10;
+}
+.transition-fade{
+    opacity: 1;
+    transition: 1500ms;
+    transform: translateX(0);
+    transform-origin: left;
+}
+
+html.is-animating .transition-fade{
+    opacity: 1;
+    transform: translateX(100%);
+}
+html.is-leaving .transition-fade{
+    opacity: 0;
+    transform: translateX(0);
+}
+.text h2{
+    font-size: 5em;
+    font-weight: 800;
+    line-height: 1em;
+    text-transform: uppercase;
+}
+.text h3{
+    font-size: 4em;
+    font-weight: 700;
+    line-height: 1em;
+    text-transform: uppercase;
+}
+.text p{
+    font-size: 1.1em;
+    margin: 20px 0;
+    font-weight: 400;
+    max-width: 700px;
+}
+
+.text a{
+    display: inline-block;
+    font-size: 1em;
+    background: #ffffff;
+    padding: 10px 30px;
+    text-decoration: none;
+    color: #111111;
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.5s;
+}
+
+.text a:hover{
+    letter-spacing: 8px;
+
+}
+
+@media(max-width : 991px ){
+    .showcase, .showcase header{
+        padding:40px;
+        position:absolute;
+        width: 100%; 
+
+    }
+    .selectDiv{
+        width: 100%;
+        position:absolute;
+        display:none;
+        float: none;
+    }
+    .text h2{
+        font-size: 3em;
+        position:relative;
+    }
+    .text h3{
+        position:absolute;
+        font-size: 2em;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .box{
+        width: 100%;
+        height: 100%;
+        margin-top: 40px;
+        }
+
+    #videoDIV{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        
+    }
+    #videoDIV iframe{
+        position: relative;
+        margin-top: 20px;
+        width: 100%;
+        height: 100%;
+    }
+    
+}
+
+#svgImg{
+    position: relative;
+    float: right;
+    margin-right: 0;
+}
+
+a:visited{
+    fill:inherit;
+}
+a:visited{
+    color :inherit;
+}
+
+svg path:hover{
+    fill:saddlebrown;
+    transition: 0.6s ease-in-out;
+    cursor: pointer;
+
+}
+#myImage{
+    width:30%;
+    height:30%;
+}
+
+#videoDIV{
+    visibility: hidden;
+    padding: 20px 20px 20px 0px;
+}
+
+select {
+
+    /* styling */
+    background-color: white;
+    border: medium solid orange;
+    border-radius: 4px;
+    display: inline-block;
+    font: inherit;
+    line-height: 1.5em;
+    padding: 0.5em 3.5em 0.5em 1em;
+  
+    /* reset */
+  
+    margin: 0;      
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    background-image:
+      linear-gradient(45deg, transparent 50%, gray 50%),
+      linear-gradient(135deg, gray 50%, transparent 50%),
+      linear-gradient(to right, #ccc, #ccc);
+    background-position:
+      calc(100% - 20px) calc(1em + 2px),
+      calc(100% - 15px) calc(1em + 2px),
+      calc(100% - 2.5em) 0.5em;
+    background-size:
+      5px 5px,
+      5px 5px,
+      1px 1.5em;
+    background-repeat: no-repeat;
+  }
+  
+  
+  select:focus {
+    background-image:
+      linear-gradient(45deg, green 50%, transparent 50%),
+      linear-gradient(135deg, transparent 50%, green 50%),
+      linear-gradient(to right, #ccc, #ccc);
+    background-position:
+      calc(100% - 15px) 1em,
+      calc(100% - 20px) 1em,
+      calc(100% - 2.5em) 0.5em;
+    background-size:
+      5px 5px,
+      5px 5px,
+      1px 1.5em;
+    background-repeat: no-repeat;
+    border-color: green;
+    outline: 0;
+  }
+  
+  
+  select:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #000;
+  }
+  
+  .btn {
+    border: none;
+    background-color: inherit;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    bottom: 0;
+    font-weight: bold
+  }
+  .reset, .resetdata {
+    color: white;
+  }
+  
+  .reset:hover , .resetdata:hover{
+    background: white;
+    color: orange;
+  }
+  p{
+      padding: 20px;
+  }
+
+  input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
